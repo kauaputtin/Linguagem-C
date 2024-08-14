@@ -1,17 +1,26 @@
+/*
+Escrever um algoritmo em C que leia a comprimento de uma (1) barra em centímetro e exiba na tela sua dimensão em:
 
-#include <stdio.h>
+Polegadas
+pés
+Sabendo que, 1 Polegada = 2.54 Centímetros = 0.08 pés (ft).
+*/
+
+#include <stdio.h> 
 #include <stdlib.h>
-int main(void) {
-  //algoritimo de entrada
-  float n1, n2, media;
-  printf("Digite sua nota do primeiro bimestre: \n");
-  scanf("%f", &n1);
-  printf("Digite sua nota do segundo bimestre: \n");
-  scanf("%f", &n2);
+#include <math.h>
 
-  media = (n1 + n2) / 2;
-  printf("Sua média é: %.1f", media);
-  
+int main(void) {
+  float comprimento, polegada, pes;
+  printf("Digite o comprimento da barra em (cm): ");
+  scanf("%f", &comprimento);
+  //cálculos 
+  polegada = comprimento / 2.54;
+  pes = comprimento * 0.08 / 2.54;
+  //exibição
+  printf("Dimensões da Barra: \n");
+  printf("Polegadas: %.2f\n", polegada);
+  printf("Pés: %.2f\n", pes);
   
   return 0;
 }
